@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+{{define "signup"}} {{template "header" .}}
+<h1 class="alert alert-info">Sign Up</h1>
+<div class="container">
+    <form method="POST" action="/signup">
+        <label class="form-control-label" for="username">User Name</label> {{with .Errors.username}}
+        <div class="alert alert-danger">
+            {{printf "%s" .}}
+        </div>
+        {{end}}
+        <input class="form-control" type="text" id="uSername" name="uSername">
+
+        <label class="form-control-label" for="fname">First Name</label> {{with .Errors.fname}}
+        <div class="alert alert-danger">
+            {{printf "%s" .}}
+        </div>
+        {{end}}
+        <input class="form-control" type="text" id="fName" name="fName">
+
+        <label class="form-control-label" for="lname"> Last Name</label> {{with .Errors.lname}}
+        <div class="alert alert-danger">
+            {{printf "%s" .}}
+        </div>
+        {{end}}
+        <input class="form-control" type="text" id="lName" name="lName">
+
+        <label class="form-control-label" for="email">Email</label> {{with .Errors.email}}
+        <div class="alert alert-danger">
+            {{printf "%s" .}}
+        </div>
+        {{end}}
+        <input class="form-control" type="email" id="eMail" name="eMail">
+
+        <label class="form-control-label" for="password">Password</label> {{with .Errors.password}}
+        <div class="alert alert-danger">
+            {{.}}
+        </div>
+        {{end}}
+
+        <input class="form-control" type="password" id="password" name="password">
+
+        <label class="form-control-label" for="cpassword">Konfirmasi Password</label> {{with .Errors.password}}
+        <div class="alert alert-danger">
+            {{printf "%s" .}}
+        </div>
+        {{end}}
+        <input class="form-control" type="password" id="cpassword" name="cpassword">
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+</div>
+<div class="alert alert-info">
+    <a href="/" class="alert-link">Sign In</a>
+</div>
+{{template "footer" .}} {{end}}
+
+</html>

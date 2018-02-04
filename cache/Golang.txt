@@ -1,0 +1,1 @@
+ini adalah text file golang, bagaimana selanjutnya

@@ -1,0 +1,9 @@
+wokey 3 Welcome To My Life
+- download angular quickstar `https://github.com/angular/quickstart`
+- extract, rename dan masuk folder untuk project angular sebagai contoh : `cd angular-start`
+- jalankan `$ npm install` untuk install dependency yang di butuhkan, terletak di file `package.json`
+- untuk menjalankan angular applikasi dengan perintah
+
+ok baby ok ok okokokok
+
+coba di mengerti golangnya

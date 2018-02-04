@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{define "internal"}} {{template "header" .}}
+<div class="alert alert-info" role="alert">
+    <h1 class="alert"> Anda sedang di Halaman Login {{.Username}} </h1>
+    <hr>
+    <strong>Hello User: {{.Username}}</strong>
+</div>
+<div class="jumbotron">
+    <div class="container">
+        Apa yang anda lakukan hari ini? {{.Fname}} {{.Lname}}
+    </div>
+</div>
+<form action="/logout" method="post">
+    <button class="btn btn-warning" type="submit">Logout</button>
+</form>
+{{template "footer" .}} {{end}}
+
+</html>
